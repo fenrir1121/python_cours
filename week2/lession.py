@@ -66,3 +66,48 @@ print(hash(tuple()))
 one_element_tuple = (1,)
 guess_what = (1)
 print(type(guess_what))
+
+
+# Словари
+
+
+empty_dict = {}
+empty_dict = dict()
+
+collections_map = {
+	'mutable': ['list', 'set', 'dict'],
+	'immutable': ['tuple', 'frozenset']
+}
+
+print(collections_map['immutable'])
+print(collections_map.get('irresistible', 'not found'))
+
+beatles_map = {
+	'Paul': 'Bass',
+	'John': 'Guitar',
+	'George': 'Guitar'
+}
+print(beatles_map)
+beatles_map['Ringo'] = 'Drums'
+print(beatles_map)
+
+del beatles_map['John']
+print(beatles_map)
+
+# Добавить новую пару если она не найдена
+
+unknown_dict = {}
+print(unknown_dict.setdefault('key', 'default'))
+print(unknown_dict)
+print(unknown_dict.setdefault('key', 'newdefault'))
+
+print(collections_map)
+
+for key in collections_map:
+	print(key)
+
+for key, value in collections_map.items():
+	print('{} - {}'.format(key, value))
+
+# OrderedDict - словарь в который добавляется именно в том
+# порядке, как положили
