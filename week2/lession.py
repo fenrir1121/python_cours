@@ -111,3 +111,39 @@ for key, value in collections_map.items():
 
 # OrderedDict - словарь в который добавляется именно в том
 # порядке, как положили
+
+
+# Множества - набор уникальных объектов
+
+empty_set = set()
+number_set = {1, 2, 3, 3, 4, 5,}
+
+print(number_set)
+print(2 in number_set)
+
+odd_set = set()
+even_set = set()
+
+for number in range(10):
+	if number % 2: # если будет остаток, то истина, если 0 - ложь
+		odd_set.add(number)
+	else:
+		even_set.add(number)
+print(odd_set)
+print(even_set)
+
+union_set = odd_set | even_set
+union_set = odd_set.union(even_set)
+print(union_set)
+
+intersection_set = odd_set & even_set
+intersection_set = odd_set.intersection(even_set)
+print(intersection_set)
+
+difference_set = odd_set - even_set
+difference_set = odd_set.difference(even_set)
+
+even_set.remove(2)
+print(even_set)
+
+# Незименяемое множество frozenset
